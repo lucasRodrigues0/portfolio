@@ -1,6 +1,5 @@
 import styled from "styled-components";
-
-const options = ['About', 'Projects', 'Contact'];
+import { OPTIONS } from "../../utils/constants"
 
 const Head = styled.header`
   width: 100%;
@@ -38,7 +37,7 @@ export const Header = () => {
           Logo
           <div>
             {
-              options.map((option) => <Button key={option}>{option}</Button>)
+              OPTIONS.map((option) => <Button key={option}>{option}</Button>)              
             }
           </div>
         </Wrapper>
