@@ -1,6 +1,6 @@
 export const SKILLS = [
   {
-    img: '../../img/logo-html.png',
+    img: '../../img/logo-angular.png',
     name: 'HTML5'
   },
   {
