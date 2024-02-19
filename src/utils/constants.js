@@ -1,7 +1,7 @@
 export const SKILLS = [ 'HTML', 'CSS', 'Bootstrap', 'Javascript', 'Typescript', 'Angular', 'React', 'Node.js', 'Express', 'Less', 'Styled-Components', 'Git', 'Mongodb' ]
 
 
-export const OPTIONS = ['About', 'Projects', 'Contact'];
+export const OPTIONS = ['About','skills', 'Projects', 'Contact'];
 
 export const PROJECTS = [
   {
