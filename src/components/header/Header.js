@@ -49,8 +49,9 @@ const Logo = styled.div`
   display: block;
   font-size: 60px;
   height: 100%;
-  width: 87px;
+  margin: 10px 0;
   text-align: center;
+  width: 87px;
 `;
 
 const ButtonsWrapper = styled.div`
