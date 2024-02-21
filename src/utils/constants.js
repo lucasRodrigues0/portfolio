@@ -17,3 +17,5 @@ export const PROJECTS = [
     link: 'app2countries.netlify.app'
   }
 ];
+
+export const CONTACT = ['Linkedin', 'Whatsapp', 'Gmail'];

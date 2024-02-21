@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   width: 90%;
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   background-color: rgba(66, 1, 65, 0);
   border: 2px solid #420141;
   border-radius: 17px;

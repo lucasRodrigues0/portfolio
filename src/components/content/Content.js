@@ -1,5 +1,6 @@
 
-import { SKILLS, PROJECTS } from '../../utils/constants';
+import { SKILLS, PROJECTS, CONTACT } from '../../utils/constants';
+import { Button } from '../header'
 import styled from "styled-components";
 
 const ContentContainer = styled.div`
@@ -82,6 +83,12 @@ const ProjectDescription = styled.p`
   font-size: 20px;
 `;
 
+const ContactWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+`;
+
 export const Content = () => {
   return (
     <ContentContainer>
@@ -119,8 +126,6 @@ export const Content = () => {
                   <Project>
                     <ProjectTitle>{proj.title}</ProjectTitle>
                     <ProjectDescription>{proj.description}</ProjectDescription>
-                    {/* <h4>Made with:</h4>
-                    <p>{proj.techs}</p> */}
                     <a href={`https://${proj.link}`} target='blank'>See More</a>
                   </Project>
                 )
@@ -132,6 +137,11 @@ export const Content = () => {
           <TitleWrapper dir="right">
             <Title>Contact</Title>
           </TitleWrapper>
+          <ContactWrapper>
+            {
+              CONTACT.map((contact) => <Button>{contact}</Button>)
+            }
+          </ContactWrapper>
         </Section>
       </SectionContainer>
     </ContentContainer>
