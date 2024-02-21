@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   width: 90%;
 `;
 
-export const Button = styled.button`
+export const LinkButton = styled.a`
   background-color: rgba(66, 1, 65, 0);
   border: 2px solid #420141;
   border-radius: 17px;
@@ -31,6 +31,8 @@ export const Button = styled.button`
   margin: 1rem 0.2rem;
   padding: 10px 5px;
   transition: background-color 0.2s ease-out, box-shadow 0.3s ease-out;
+  text-align: center;
+  text-decoration: none;
   width: 170px;
   &: last-child {
     margin-right: 0;
@@ -70,7 +72,7 @@ export const Header = () => {
           </Logo>
           <ButtonsWrapper>
             {
-              OPTIONS.map((option) => <Button key={option}>{option}</Button>)              
+              OPTIONS.map((option) => <LinkButton key={option} href={`/#${option}`}>{option}</LinkButton>)              
             }
           </ButtonsWrapper>
         </Wrapper>

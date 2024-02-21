@@ -1,6 +1,6 @@
 
 import { SKILLS, PROJECTS, CONTACT } from '../../utils/constants';
-import { Button } from '../header'
+import { LinkButton } from '../header'
 import styled from "styled-components";
 
 const ContentContainer = styled.div`
@@ -20,6 +20,7 @@ const SectionContainer = styled.div`
 const Section = styled.section`
   display: flex;
   flex-direction: column;
+  min-height: 515px;
 `;
 
 const TitleWrapper = styled.div`
@@ -93,13 +94,13 @@ export const Content = () => {
   return (
     <ContentContainer>
       <SectionContainer>
-        <Section>
+        <Section id="About">
           <TitleWrapper>
             <Title>About Me</Title>
           </TitleWrapper>
           <Paragraph>Hello, I'm Lucas, a Brazilian web developer. I hold a degree in Systems Development and Analysis. With four years of experience in IT, specializing in change management, I'm now eager to transition into a role as a Junior Front-End Developer.</Paragraph>
         </Section>
-        <Section>
+        <Section id="Skills">
           <TitleWrapper dir="right">
             <Title>Skills</Title>
           </TitleWrapper>
@@ -115,7 +116,7 @@ export const Content = () => {
             </List>
           </ListWrapper>
         </Section>
-        <Section>
+        <Section id="Projects">
           <TitleWrapper>
             <Title>Personal Projects</Title>
           </TitleWrapper>
@@ -133,13 +134,13 @@ export const Content = () => {
             }
           </ProjectWrapper>
         </Section>
-        <Section>
+        <Section id="Contact">
           <TitleWrapper dir="right">
             <Title>Contact</Title>
           </TitleWrapper>
           <ContactWrapper>
             {
-              CONTACT.map((contact) => <Button>{contact}</Button>)
+              CONTACT.map((contact) => <LinkButton href={contact.href} target='blank'>{contact.name}</LinkButton>)
             }
           </ContactWrapper>
         </Section>
