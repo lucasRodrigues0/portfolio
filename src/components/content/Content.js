@@ -1,7 +1,21 @@
 
 import { SKILLS, PROJECTS, CONTACT } from '../../utils/constants';
 import { LinkButton } from '../header'
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const horizontalSlide = keyframes`
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+`;
+
+const verticalSlide = keyframes`
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+`;
 
 const ContentContainer = styled.div`
   background-color: #010005;
@@ -31,10 +45,13 @@ const TitleWrapper = styled.div`
 `;
 
 const Title = styled.h1`
+  animation: ${horizontalSlide} 0.5s ease-out forwards;
   background-color: transparent;
   font-size: 70px;
-  width: fit-content;
+  opacity: 0;
+  transform: translateX(${props => props.animation === "left" ? "-50%" : "50%"});
   transition: text-shadow 0.3s ease-out;
+  width: fit-content;
   &: hover {
     transition: text-shadow 0.3s ease-in;
     text-shadow: 5px 3px 22px rgba(66,1,65,0.79);
@@ -42,9 +59,12 @@ const Title = styled.h1`
 `;
 
 const Paragraph = styled.p`
-  width: 50%;
+  animation: ${horizontalSlide} 0.5s ease-out forwards;
   font-size: 30px;
   margin-left: 25%;
+  opacity: 0;
+  transform: translateX(20%);
+  width: 50%;
 `;
 
 const ListWrapper = styled.div`
@@ -54,11 +74,14 @@ const ListWrapper = styled.div`
 `;
 
 const List = styled.ul`
+  animation: ${horizontalSlide} 0.5s ease-out forwards;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   list-style: circle;
   margin-right: 30%;
+  opacity: 0;
+  transform: translateX(-20%);
   width: 50%;
 `;
 
@@ -67,6 +90,9 @@ const ListItem = styled.li`
 `;
 
 const Project = styled.div`
+  animation: ${verticalSlide} 0.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20%);
   width: 20%;
 `;
 
@@ -85,9 +111,12 @@ const ProjectDescription = styled.p`
 `;
 
 const ContactWrapper = styled.div`
+  animation: ${verticalSlide} 0.5s ease-out forwards;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  opacity: 0;
+  transform: translateY(100%);
 `;
 
 export const Content = () => {
@@ -96,7 +125,7 @@ export const Content = () => {
       <SectionContainer>
         <Section id="About">
           <TitleWrapper>
-            <Title>About Me</Title>
+            <Title animation="left">About Me</Title>
           </TitleWrapper>
           <Paragraph>Hello, I'm Lucas, a Brazilian web developer. I hold a degree in Systems Development and Analysis. With four years of experience in IT, specializing in change management, I'm now eager to transition into a role as a Junior Front-End Developer.</Paragraph>
         </Section>
@@ -118,7 +147,7 @@ export const Content = () => {
         </Section>
         <Section id="Projects">
           <TitleWrapper>
-            <Title>Personal Projects</Title>
+            <Title animation="left">Personal Projects</Title>
           </TitleWrapper>
           <ProjectWrapper>
             {
