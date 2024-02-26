@@ -3,20 +3,6 @@ import { SKILLS, PROJECTS, CONTACT } from '../../utils/constants';
 import { LinkButton } from '../header'
 import styled, { keyframes } from "styled-components";
 
-const horizontalSlide = keyframes`
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-`;
-
-const verticalSlide = keyframes`
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-`;
-
 const ContentContainer = styled.div`
   background-color: #010005;
   color: white;
@@ -45,11 +31,9 @@ const TitleWrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  animation: ${horizontalSlide} 0.5s ease-out forwards;
   background-color: transparent;
   font-size: 70px;
-  opacity: 0;
-  transform: translateX(${props => props.animation === "left" ? "-50%" : "50%"});
+  /* transform: translateX(${props => props.animation === "left" ? "-50%" : "50%"}); */ //vai sair
   transition: text-shadow 0.3s ease-out;
   width: fit-content;
   &: hover {
@@ -59,11 +43,8 @@ const Title = styled.h1`
 `;
 
 const Paragraph = styled.p`
-  animation: ${horizontalSlide} 0.5s ease-out forwards;
   font-size: 30px;
   margin-left: 25%;
-  opacity: 0;
-  transform: translateX(20%);
   width: 50%;
 `;
 
@@ -74,14 +55,11 @@ const ListWrapper = styled.div`
 `;
 
 const List = styled.ul`
-  animation: ${horizontalSlide} 0.5s ease-out forwards;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   list-style: circle;
   margin-right: 30%;
-  opacity: 0;
-  transform: translateX(-20%);
   width: 50%;
 `;
 
@@ -90,8 +68,6 @@ const ListItem = styled.li`
 `;
 
 const Project = styled.div`
-  animation: ${verticalSlide} 0.5s ease-out forwards;
-  opacity: 0;
   transform: translateY(20%);
   width: 20%;
 `;
@@ -111,12 +87,9 @@ const ProjectDescription = styled.p`
 `;
 
 const ContactWrapper = styled.div`
-  animation: ${verticalSlide} 0.5s ease-out forwards;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  opacity: 0;
-  transform: translateY(100%);
 `;
 
 export const Content = () => {
