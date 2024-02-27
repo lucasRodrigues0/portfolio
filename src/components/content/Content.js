@@ -1,7 +1,55 @@
 
 import { SKILLS, PROJECTS, CONTACT } from '../../utils/constants';
 import { LinkButton } from '../header'
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const slideFromLeftAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+`;
+
+const slideFromRightAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+`;
+
+const slideFromTopAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+`;
+
+const slideFromBottomAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+`;
 
 const ContentContainer = styled.div`
   background-color: #010005;
@@ -31,10 +79,13 @@ const TitleWrapper = styled.div`
 `;
 
 const Title = styled.h1`
+  animation: ${props => props.dir === "right" ? slideFromRightAnimation : slideFromLeftAnimation} 1ms ease-out;
+  animation-range: cover 0% cover 50%;
+  animation-timeline: view();
   background-color: transparent;
   font-size: 70px;
-  width: fit-content;
   transition: text-shadow 0.3s ease-out;
+  width: fit-content;
   &: hover {
     transition: text-shadow 0.3s ease-in;
     text-shadow: 5px 3px 22px rgba(66,1,65,0.79);
@@ -42,9 +93,13 @@ const Title = styled.h1`
 `;
 
 const Paragraph = styled.p`
-  width: 50%;
+//resolver pois como ta no topo do scroll ele nao anima direito
+  animation: ${slideFromRightAnimation} 1ms ease-out;
+  animation-range: cover 0% cover 50%;
+  animation-timeline: view();
   font-size: 30px;
   margin-left: 25%;
+  width: 50%;
 `;
 
 const ListWrapper = styled.div`
@@ -54,6 +109,9 @@ const ListWrapper = styled.div`
 `;
 
 const List = styled.ul`
+  animation: ${slideFromLeftAnimation} 1ms ease-out;
+  animation-range: cover 0% cover 50%;
+  animation-timeline: view();
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -67,6 +125,9 @@ const ListItem = styled.li`
 `;
 
 const Project = styled.div`
+  animation: ${slideFromTopAnimation} 1ms ease-out;
+  animation-range: cover 0% cover 50%;
+  animation-timeline: view();
   width: 20%;
 `;
 
@@ -85,6 +146,9 @@ const ProjectDescription = styled.p`
 `;
 
 const ContactWrapper = styled.div`
+  animation: ${slideFromBottomAnimation} 1ms ease-out;
+  animation-range: cover 0% cover 50%;
+  animation-timeline: view();
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -102,7 +166,7 @@ export const Content = () => {
         </Section>
         <Section id="Skills">
           <TitleWrapper dir="right">
-            <Title>Skills</Title>
+            <Title dir="right">Skills</Title>
           </TitleWrapper>
           <ListWrapper>
             <List>
@@ -136,7 +200,7 @@ export const Content = () => {
         </Section>
         <Section id="Contact">
           <TitleWrapper dir="right">
-            <Title>Contact</Title>
+            <Title dir="right">Contact</Title>
           </TitleWrapper>
           <ContactWrapper>
             {

@@ -9,12 +9,6 @@ export const PROJECTS = [
     description: 'a simple app that displays some information about countries',
     techs: 'Angular',
     link: 'app2countries.netlify.app'
-  },
-  {
-    title: 'Countries App',
-    description: 'a simple app that displays some information about countries',
-    techs: 'Angular',
-    link: 'app2countries.netlify.app'
   }
 ];
 
