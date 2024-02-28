@@ -9,4 +9,8 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   min-height: 515px;
+
+  @media (max-width: 940px) {
+    min-height: fit-content;
+  }
 `;

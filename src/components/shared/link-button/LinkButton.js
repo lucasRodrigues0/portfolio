@@ -14,13 +14,19 @@ export const LinkButton = styled.a`
   text-align: center;
   text-decoration: none;
   width: 170px;
+
   &: last-child {
     margin-right: 0;
   }
+
   &: hover {
     background-color: rgba(66, 1, 65, 1);
     box-shadow: 8px 1px 61px 18px rgba(66,1,65,0.52);
     transition: background-color 0.2s ease-in, box-shadow 0.3s ease-in;
+  }
+
+  @media (max-width: 512px) {
+    font-size: 20px;
   }
 `;
 
