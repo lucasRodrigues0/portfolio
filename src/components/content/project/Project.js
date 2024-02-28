@@ -6,6 +6,11 @@ export const Project = styled.div`
   animation-range: cover 0% cover 50%;
   animation-timeline: view();
   width: 20%;
+
+  @media (max-width: 940px) {
+    animation: none;
+    width: 100%;
+  }
 `;
 
 export const ProjectWrapper = styled.div`
@@ -16,8 +21,16 @@ export const ProjectWrapper = styled.div`
 
 export const ProjectTitle = styled.h3`
   font-size: 30px;
+
+  @media (max-width: 512px) {
+    font-size: 20px;
+  }
 `;
 
 export const ProjectDescription = styled.p`
   font-size: 20px;
+
+  @media (max-width: 512px) {
+    font-size: 15px;
+  }
 `;

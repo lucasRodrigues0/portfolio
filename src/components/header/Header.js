@@ -8,6 +8,10 @@ import { Wrapper } from "./wrapper";
 const Head = styled.header`
   background-color: #010005;
   width: 100%;
+
+  @media (max-width: 940px) {
+    display: none;
+  }
 `;
 
 export const Header = () => {
