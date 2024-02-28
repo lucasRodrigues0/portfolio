@@ -1,64 +1,13 @@
 import styled from "styled-components";
 import { OPTIONS } from "../../utils/constants"
+import { LinkButton, ButtonsWrapper } from "../shared/link-button";
+import { Navbar } from "./navbar";
+import { Logo } from "./logo";
+import { Wrapper } from "./wrapper";
 
 const Head = styled.header`
   background-color: #010005;
   width: 100%;
-`;
-
-const Navbar = styled.nav`
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0);
-  display: flex;
-  justify-content: center;
-`;
-
-const Wrapper = styled.div`
-  align-items: center;
-  display: flex;
-  Justify-content: space-between;
-  width: 90%;
-`;
-
-export const LinkButton = styled.a`
-  background-color: rgba(66, 1, 65, 0);
-  border: 2px solid #420141;
-  border-radius: 17px;
-  color: white;
-  font-family: sans-serif;
-  font-size: 25px;
-  height: 100%;
-  margin: 1rem 0.2rem;
-  padding: 10px 5px;
-  transition: background-color 0.2s ease-out, box-shadow 0.3s ease-out;
-  text-align: center;
-  text-decoration: none;
-  width: 170px;
-  &: last-child {
-    margin-right: 0;
-  }
-  &: hover {
-    background-color: rgba(66, 1, 65, 1);
-    box-shadow: 8px 1px 61px 18px rgba(66,1,65,0.52);
-    transition: background-color 0.2s ease-in, box-shadow 0.3s ease-in;
-  }
-`;
-
-const Logo = styled.div`
-  background-color: #420141;
-  border-radius: 100%;
-  color: white;
-  display: block;
-  font-size: 60px;
-  height: 100%;
-  margin: 10px 0;
-  text-align: center;
-  width: 87px;
-`;
-
-const ButtonsWrapper = styled.div`
-  display:flex;
-  width: fit-content;
 `;
 
 export const Header = () => {
