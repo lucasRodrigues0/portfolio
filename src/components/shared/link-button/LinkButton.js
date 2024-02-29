@@ -33,4 +33,8 @@ export const LinkButton = styled.a`
 export const ButtonsWrapper = styled.div`
   display:flex;
   width: fit-content;
+
+  @media (max-width: 940px) {
+    display: none;
+  }
 `;
