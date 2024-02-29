@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const LinkButton = styled.a`
   background-color: rgba(66, 1, 65, 0);
   border: 2px solid #420141;
-  border-radius: 17px;
+  border-radius: 50px;
   color: white;
   font-family: sans-serif;
   font-size: 25px;
@@ -25,7 +25,7 @@ export const LinkButton = styled.a`
     transition: background-color 0.2s ease-in, box-shadow 0.3s ease-in;
   }
 
-  @media (max-width: 512px) {
+  @media (max-width: 513px) {
     font-size: 20px;
   }
 `;
@@ -33,4 +33,8 @@ export const LinkButton = styled.a`
 export const ButtonsWrapper = styled.div`
   display:flex;
   width: fit-content;
+
+  @media (max-width: 940px) {
+    display: none;
+  }
 `;
