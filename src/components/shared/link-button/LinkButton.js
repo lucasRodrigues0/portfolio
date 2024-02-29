@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const LinkButton = styled.a`
   background-color: rgba(66, 1, 65, 0);
   border: 2px solid #420141;
-  border-radius: 17px;
+  border-radius: 50px;
   color: white;
   font-family: sans-serif;
   font-size: 25px;
