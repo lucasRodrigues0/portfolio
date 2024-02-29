@@ -22,7 +22,7 @@ export const ProjectWrapper = styled.div`
 export const ProjectTitle = styled.h3`
   font-size: 30px;
 
-  @media (max-width: 512px) {
+  @media (max-width: 513px) {
     font-size: 20px;
   }
 `;
@@ -30,7 +30,7 @@ export const ProjectTitle = styled.h3`
 export const ProjectDescription = styled.p`
   font-size: 20px;
 
-  @media (max-width: 512px) {
+  @media (max-width: 513px) {
     font-size: 15px;
   }
 `;

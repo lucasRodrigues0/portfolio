@@ -16,7 +16,7 @@ export const Paragraph = styled.p`
     width: 100%;
   }
 
-  @media (max-width: 512px) {
+  @media (max-width: 513px) {
     font-size: 15px;
   }
 `;

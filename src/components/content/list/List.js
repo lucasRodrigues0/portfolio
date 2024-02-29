@@ -27,7 +27,7 @@ export const List = styled.ul`
 export const ListItem = styled.li`
   font-size: 30px;
 
-  @media (max-width: 512px) {
+  @media (max-width: 513px) {
     font-size: 15px;
   }
 `;

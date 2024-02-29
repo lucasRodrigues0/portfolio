@@ -25,7 +25,7 @@ export const LinkButton = styled.a`
     transition: background-color 0.2s ease-in, box-shadow 0.3s ease-in;
   }
 
-  @media (max-width: 512px) {
+  @media (max-width: 513px) {
     font-size: 20px;
   }
 `;
