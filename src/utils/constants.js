@@ -44,3 +44,33 @@ export const CONTACT = [
     href: '#'
   }
 ];
+
+export const TITLE_ABOUT = {
+  PTBR: "Sobre Mim",
+  EN: "About me"
+}
+
+export const ABOUT_PARAGRAPH = {
+  PTBR: "Olá, sou Lucas, um desenvolvedor web do Brasil. Sou graduado em Análise e Desenvolvimento de Sistemas. Com quatro anos de experiência em TI, com especialidade em Gestão de Mudanças, busco fazer a transição para uma posição de Desenvolvedor Front-end Junior.",
+  EN: "Hello, i'm Lucas, a Brazilian web developer. I hold a degree in Systems Development and Analysis. With four years of experience in IT, specializing in change management, I'm now eager to transition into a role as a Junior Front-End Developer."
+}
+
+export const TITLE_SKILLS = {
+  PTBR: "Habilidades",
+  EN: "Skills"
+}
+
+export const TITLE_PROJECTS = {
+  PTBR: "Projetos Pessoais",
+  EN: "Personal Projects" 
+}
+
+export const PROJECT_LINK_TEXT = {
+  PTBR: "Ver mais",
+  EN: "See more" 
+}
+
+export const TITLE_CONTACT = {
+  PTBR: "Contato",
+  EN: "Contact"
+}

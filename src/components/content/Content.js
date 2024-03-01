@@ -1,6 +1,6 @@
 
 import styled from "styled-components";
-import { SKILLS, PROJECTS, CONTACT } from '../../utils/constants';
+import { SKILLS, PROJECTS, CONTACT, TITLE_ABOUT, ABOUT_PARAGRAPH, TITLE_SKILLS, TITLE_PROJECTS, PROJECT_LINK_TEXT, TITLE_CONTACT } from '../../utils/constants';
 import { LinkButton } from "../shared/link-button";
 import { Section, SectionContainer } from './section';
 import { Title, TitleWrapper } from './title';
@@ -26,18 +26,17 @@ export const Content = ({language}) => {
         <Section id="About">
           <TitleWrapper>
             <Title>
-              {language === 'PTBR' ? "Sobre Mim" : language === 'EN' ? "About Me" : ""}
+              {TITLE_ABOUT[`${language}`]}
             </Title>
           </TitleWrapper>
           <Paragraph>
-            {language === 'PTBR' ? "Olá, sou Lucas, um desenvolvedor web do Brasil. Sou graduado em Análise e Desenvolvimento de Sistemas. Com quatro anos de experiência em TI, com especialidade em Gestão de Mudanças, busco fazer a transição para uma posição de Desenvolvedor Front-end Junior." : 
-            language === 'EN' ? "Hello, i'm Lucas, a Brazilian web developer. I hold a degree in Systems Development and Analysis. With four years of experience in IT, specializing in change management, I'm now eager to transition into a role as a Junior Front-End Developer." : ""}
+            {ABOUT_PARAGRAPH[`${language}`]}
           </Paragraph>
         </Section>
         <Section id="Skills">
           <TitleWrapper dir="right">
             <Title dir="right">
-              {language === 'PTBR' ? "Habilidades" : language === 'EN' ? "Skills" : ""}
+              {TITLE_SKILLS[`${language}`]}
             </Title>
           </TitleWrapper>
           <ListWrapper>
@@ -55,7 +54,7 @@ export const Content = ({language}) => {
         <Section id="Projects">
           <TitleWrapper>
             <Title>
-              {language === 'PTBR' ? "Projetos Pessoais" : language === 'EN' ? "Personal Projects" : ""}
+              {TITLE_PROJECTS[`${language}`]}
             </Title>
           </TitleWrapper>
           <ProjectWrapper>
@@ -64,8 +63,8 @@ export const Content = ({language}) => {
                 return (
                   <Project key={proj.title}>
                     <ProjectTitle>{proj.title}</ProjectTitle>
-                    <ProjectDescription>{language === "PTBR" ? proj.description.PTBR : language === "EN" ? proj.description.EN : ""}</ProjectDescription>
-                    <a href={`https://${proj.link}`} target='blank'>See More</a>
+                    <ProjectDescription>{proj.description[`${language}`]}</ProjectDescription>
+                    <a href={`https://${proj.link}`} target='blank'>{PROJECT_LINK_TEXT[`${language}`]}</a>
                   </Project>
                 )
               })
@@ -75,7 +74,7 @@ export const Content = ({language}) => {
         <Section id="Contact">
           <TitleWrapper dir="right">
             <Title dir="right">
-              {language === 'PTBR' ? "Contato" : language === 'EN' ? "Contact" : ""}
+              {TITLE_CONTACT[`${language}`]}
             </Title>
           </TitleWrapper>
           <ContactWrapper>
