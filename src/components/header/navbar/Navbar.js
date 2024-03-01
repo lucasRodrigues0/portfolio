@@ -5,4 +5,5 @@ export const Navbar = styled.nav`
   background-color: rgba(0, 0, 0, 0);
   display: flex;
   justify-content: center;
+  min-height: 85px;
 `;
