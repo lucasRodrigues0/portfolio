@@ -37,11 +37,11 @@ export const CONTACT = [
   },
   {
     name: 'Whatsapp',
-    href: '#'
+    href: 'https://wa.me/5561999575786'
   },
   {
     name: 'Gmail',
-    href: '#'
+    href: 'https://mail.google.com/mail/u/0/#inbox?compose=jrjtXVXCBXgkgHgVtWGcZWBGDvsmqdgJnBwrsnbszsfsqBjjvsjxMdnpgCcqwdczcmWCcJGg'
   }
 ];
 
