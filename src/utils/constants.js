@@ -27,6 +27,14 @@ export const PROJECTS = [
       PTBR: 'Uma aplicação simples que apresenta informações sobre países'
     },
     link: 'app2countries.netlify.app'
+  },
+  {
+    title: 'To Do List',
+    description: {
+      EN: 'A simple To Do List',
+      PTBR: 'Uma To Do List simples'
+    },
+    link: 'endearing-pegasus-1f2d9f.netlify.app'
   }
 ];
 

@@ -9,7 +9,7 @@ export const ListWrapper = styled.div`
 
 export const List = styled.ul`
   animation: ${slideFromLeftAnimation} 1ms ease-out;
-  animation-range: cover 0% cover 50%;
+  animation-range: cover 0% cover 25%;
   animation-timeline: view();
   display: flex;
   flex-direction: column;

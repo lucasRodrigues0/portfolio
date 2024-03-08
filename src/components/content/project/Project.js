@@ -3,7 +3,7 @@ import { slideFromTopAnimation } from '../../../utils/keyframes';
 
 export const Project = styled.div`
   animation: ${slideFromTopAnimation} 1ms ease-out;
-  animation-range: cover 0% cover 50%;
+  animation-range: cover 0% cover 25%;
   animation-timeline: view();
   width: 20%;
 

@@ -3,7 +3,7 @@ import { slideFromBottomAnimation } from '../../../utils/keyframes';
 
 export const ContactWrapper = styled.div`
   animation: ${slideFromBottomAnimation} 1ms ease-out;
-  animation-range: cover 0% cover 50%;
+  animation-range: cover 0% cover 30%;
   animation-timeline: view();
   display: flex;
   flex-direction: row;
