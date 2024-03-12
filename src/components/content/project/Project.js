@@ -1,10 +1,8 @@
 import styled from "styled-components";
 import { slideFromTopAnimation } from '../../../utils/keyframes';
+import { motion } from "framer-motion";
 
-export const Project = styled.div`
-  animation: ${slideFromTopAnimation} 1ms ease-out;
-  animation-range: cover 0% cover 25%;
-  animation-timeline: view();
+export const Project = styled(motion.div)`
   width: 20%;
 
   @media (max-width: 940px) {

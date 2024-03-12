@@ -8,7 +8,7 @@ export const SectionContainer = styled.div`
 export const Section = styled.section`
   display: flex;
   flex-direction: column;
-  min-height: 515px;
+  min-height: 700px;
 
   @media (max-width: 940px) {
     min-height: fit-content;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { slideFromRightAnimation, slideFromLeftAnimation } from '../../../utils/keyframes';
+import { motion } from "framer-motion";
 
 export const TitleWrapper = styled.div`
   display: flex;
@@ -12,10 +13,7 @@ export const TitleWrapper = styled.div`
   }
 `;
 
-export const Title = styled.h1`
-  animation: ${props => props.dir === "right" ? slideFromRightAnimation : slideFromLeftAnimation} 1ms ease-out;
-  animation-range: cover 0% cover 50%;
-  animation-timeline: view();
+export const Title = styled(motion.h1)`
   background-color: transparent;
   font-size: 70px;
   transition: text-shadow 0.3s ease-out;

@@ -1,10 +1,8 @@
 import styled from "styled-components";
 import { slideFromBottomAnimation } from '../../../utils/keyframes';
+import { motion } from "framer-motion";
 
-export const ContactWrapper = styled.div`
-  animation: ${slideFromBottomAnimation} 1ms ease-out;
-  animation-range: cover 0% cover 30%;
-  animation-timeline: view();
+export const ContactWrapper = styled(motion.div)`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
