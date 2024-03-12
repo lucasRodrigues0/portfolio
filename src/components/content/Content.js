@@ -20,14 +20,6 @@ const ContentContainer = styled.div`
 
 export const Content = ({language, isMobile}) => {
 
-  // const initialLeft = {opacity: 0, x: -50};
-  // const initialRight = {opacity: 0, x: 50};
-  // const horizontalSlide = {opacity: 1, x: 0};
-  // const initialTop = {opacity: 0, y: -50};
-  // const initialBottom = {opacity: 0, y: 50};
-  // const verticalSlide = {opacity: 1, y: 0};
-  // const transition = {type: "tween", duration: 0.7, ease: "easeOut"};
-
   let boxVariants = {};
 
   if(!isMobile) {
