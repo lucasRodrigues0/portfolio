@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { slideFromRightAnimation, slideFromLeftAnimation } from '../../../utils/keyframes';
 import { motion } from "framer-motion";
 
 export const TitleWrapper = styled.div`

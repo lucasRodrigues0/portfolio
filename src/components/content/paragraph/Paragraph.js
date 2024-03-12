@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { slideFromRightAnimation } from '../../../utils/keyframes';
 import { motion } from "framer-motion";
 
 export const Paragraph = styled(motion.p)`

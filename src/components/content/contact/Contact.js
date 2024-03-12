@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { slideFromBottomAnimation } from '../../../utils/keyframes';
 import { motion } from "framer-motion";
 
 export const ContactWrapper = styled(motion.div)`

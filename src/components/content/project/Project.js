@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { slideFromTopAnimation } from '../../../utils/keyframes';
 import { motion } from "framer-motion";
 
 export const Project = styled(motion.div)`
