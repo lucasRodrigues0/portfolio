@@ -1,10 +1,8 @@
 import styled from "styled-components";
 import { slideFromRightAnimation } from '../../../utils/keyframes';
+import { motion } from "framer-motion";
 
-export const Paragraph = styled.p`
-  animation: ${slideFromRightAnimation} 1ms ease-out;
-  animation-range: cover 0% cover 50%;
-  animation-timeline: view();
+export const Paragraph = styled(motion.p)`
   font-size: 30px;
   margin-left: 25%;
   width: 50%;

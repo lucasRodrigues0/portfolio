@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { slideFromLeftAnimation } from "../../../utils/keyframes";
+import { motion } from "framer-motion";
 
 export const ListWrapper = styled.div`
   display: flex;
@@ -7,10 +8,7 @@ export const ListWrapper = styled.div`
   justify-content: center;
 `;
 
-export const List = styled.ul`
-  animation: ${slideFromLeftAnimation} 1ms ease-out;
-  animation-range: cover 0% cover 25%;
-  animation-timeline: view();
+export const List = styled(motion.ul)`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

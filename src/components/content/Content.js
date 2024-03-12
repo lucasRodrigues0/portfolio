@@ -18,29 +18,68 @@ const ContentContainer = styled.div`
   width: 90%;
 `;
 
-export const Content = ({language}) => {
+export const Content = ({language, isMobile}) => {
+
+  // const initialLeft = {opacity: 0, x: -50};
+  // const initialRight = {opacity: 0, x: 50};
+  // const horizontalSlide = {opacity: 1, x: 0};
+  // const initialTop = {opacity: 0, y: -50};
+  // const initialBottom = {opacity: 0, y: 50};
+  // const verticalSlide = {opacity: 1, y: 0};
+  // const transition = {type: "tween", duration: 0.7, ease: "easeOut"};
+
+  let boxVariants = {};
+
+  if(!isMobile) {
+    boxVariants = {
+       initialLeft: {opacity: 0, x: -50},
+       initialRight: {opacity: 0, x: 50},
+       initialTop: {opacity: 0, y: -50},
+       initialBottom: {opacity: 0, y: 50},
+       horizontalSlide: {opacity: 1, x: 0},
+       verticalSlide: {opacity: 1, y: 0},
+       transition: {type: "tween", duration: 0.7, ease: "easeOut"}
+
+    }
+  }
 
   return (
     <ContentContainer>
       <SectionContainer>
         <Section id="About">
           <TitleWrapper>
-            <Title>
+            <Title
+            variants={boxVariants}
+            initial="initialLeft"
+            whileInView="horizontalSlide"
+            transition="transition">
               {TITLE_ABOUT[`${language}`]}
             </Title>
           </TitleWrapper>
-          <Paragraph>
+          <Paragraph
+          variants={boxVariants}
+          initial="initialRight"
+          whileInView="horizontalSlide"
+          transition="transition">
             {ABOUT_PARAGRAPH[`${language}`]}
           </Paragraph>
         </Section>
         <Section id="Skills">
           <TitleWrapper dir="right">
-            <Title dir="right">
+            <Title
+            variants={boxVariants}
+            initial="initialRight"
+            whileInView="horizontalSlide"
+            transition="transition">     
               {TITLE_SKILLS[`${language}`]}
             </Title>
           </TitleWrapper>
           <ListWrapper>
-            <List>
+            <List
+            variants={boxVariants}
+            initial="initialLeft"
+            whileInView="horizontalSlide"
+            transition="transition">
               {
                 SKILLS.map((skill) => {
                   return (
@@ -53,7 +92,11 @@ export const Content = ({language}) => {
         </Section>
         <Section id="Projects">
           <TitleWrapper>
-            <Title>
+            <Title
+            variants={boxVariants}
+            initial="initialLeft"
+            whileInView="horizontalSlide"
+            transition="transition">
               {TITLE_PROJECTS[`${language}`]}
             </Title>
           </TitleWrapper>
@@ -61,7 +104,12 @@ export const Content = ({language}) => {
             {
               PROJECTS.map((proj) => {
                 return (
-                  <Project key={proj.title}>
+                  <Project
+                  key={proj.title}
+                  variants={boxVariants}
+                  initial="initialTop"
+                  whileInView="verticalSlide"
+                  transition="transition">
                     <ProjectTitle>{proj.title}</ProjectTitle>
                     <ProjectDescription>{proj.description[`${language}`]}</ProjectDescription>
                     <a href={`https://${proj.link}`} target='blank'>{PROJECT_LINK_TEXT[`${language}`]}</a>
@@ -73,11 +121,19 @@ export const Content = ({language}) => {
         </Section>
         <Section id="Contact">
           <TitleWrapper dir="right">
-            <Title dir="right">
+            <Title
+            variants={boxVariants}
+            initial="initialRight"
+            whileInView="horizontalSlide"
+            transition="transition">
               {TITLE_CONTACT[`${language}`]}
             </Title>
           </TitleWrapper>
-          <ContactWrapper>
+          <ContactWrapper
+          variants={boxVariants}
+          initial="initialBottom"
+          whileInView="verticalSlide"
+          transition="transition">
             {
               CONTACT.map((contact) => <LinkButton href={contact.href} target='blank' key={contact.name}>{contact.name}</LinkButton>)
             }
