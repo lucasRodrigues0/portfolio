@@ -6,7 +6,7 @@ export const Project = styled(motion.div)`
 
   @media (max-width: 940px) {
     animation: none;
-    width: 100%;
+    width: 90%;
   }
 `;
 
@@ -31,3 +31,5 @@ export const ProjectDescription = styled.p`
     font-size: 15px;
   }
 `;
+
+export const ProjectLink = styled.a``;

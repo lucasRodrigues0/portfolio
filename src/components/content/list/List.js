@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 export const ListWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
+  width: 100%;
 `;
 
 export const List = styled(motion.ul)`
@@ -17,12 +18,17 @@ export const List = styled(motion.ul)`
 
   @media (max-width: 940px) {
     animation: none;
-    margin: 0;
+    padding: 25px;
+  }
+
+  @media (max-width: 513px) {
+    padding: 20px;
   }
 `;
 
 export const ListItem = styled.li`
   font-size: 30px;
+  padding: 0;
 
   @media (max-width: 513px) {
     font-size: 15px;

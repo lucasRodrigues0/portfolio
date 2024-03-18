@@ -4,7 +4,7 @@ export const LinkButton = styled.a`
   background-color: rgba(66, 1, 65, 0);
   border: 2px solid #420141;
   border-radius: 50px;
-  color: white;
+  color: ${props => props.color === "inv" ? "#000" : "#fff"};
   font-family: sans-serif;
   font-size: 25px;
   height: 100%;
@@ -22,6 +22,7 @@ export const LinkButton = styled.a`
   &: hover {
     background-color: rgba(66, 1, 65, 1);
     box-shadow: 8px 1px 61px 18px rgba(66,1,65,0.52);
+    color: ${props => props.color === "inv" ? "#fff" : ""};
     transition: background-color 0.2s ease-in, box-shadow 0.3s ease-in;
   }
 
@@ -31,7 +32,7 @@ export const LinkButton = styled.a`
 `;
 
 export const ButtonsWrapper = styled.div`
-  display:flex;
+  display: flex;
   width: fit-content;
 
   @media (max-width: 940px) {
