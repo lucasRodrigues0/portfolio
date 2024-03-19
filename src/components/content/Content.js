@@ -17,7 +17,7 @@ const ContentContainer = styled.div`
   margin: auto;
 `;
 
-export const Content = ({language, isMobile}) => {
+export const Content = ({language}) => {
 
   const boxVariants = {
     initialLeft: {opacity: 0, x: -50},

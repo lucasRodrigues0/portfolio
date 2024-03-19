@@ -6,8 +6,6 @@ function App() {
 
   const [language, setLanguage] = useState('PTBR');
 
-  const isMobile = window.innerWidth <= 940;
-
   const selectLanguage = (e) => {
     const lang = e.target.value;
     setLanguage(lang);
@@ -16,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Header language={language} selectLanguage={selectLanguage}/>
-      <Content language={language} isMobile={isMobile}/>
+      <Content language={language} />
     </div>
   );
 }

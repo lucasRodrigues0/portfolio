@@ -7,6 +7,7 @@ export const SectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding-bottom: 30px;
+  overflow-x: hidden;
   width: 100%;
 `;
 

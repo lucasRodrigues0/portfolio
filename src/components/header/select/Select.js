@@ -7,7 +7,7 @@ export const Select = styled.select`
     color: white;
     font-size: 20px;
     padding: 5px;
-    text-align: left;
+    text-align: center;
     width: 120px;
 `;
 
