@@ -69,8 +69,8 @@ export const TITLE_SKILLS = {
 }
 
 export const TITLE_PROJECTS = {
-  PTBR: "Projetos Pessoais",
-  EN: "Personal Projects" 
+  PTBR: "Projetos",
+  EN: "Projects" 
 }
 
 export const PROJECT_LINK_TEXT = {
