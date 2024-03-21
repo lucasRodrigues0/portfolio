@@ -2,18 +2,17 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const Project = styled(motion.div)`
-  width: 20%;
+  width: 50%;
 
   @media (max-width: 940px) {
-    animation: none;
     width: 100%;
   }
 `;
 
 export const ProjectWrapper = styled.div`
+  align-items: center; 
   display: flex;
   flex-direction: column;
-  align-items: center;
 `;
 
 export const ProjectTitle = styled.h3`
@@ -31,3 +30,5 @@ export const ProjectDescription = styled.p`
     font-size: 15px;
   }
 `;
+
+export const ProjectLink = styled.a``;

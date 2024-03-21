@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
   width: 90%;
 
   @media (max-width: 940px) {
-    justify-content: center;
+    padding: 0 10px;
+    width: 100%;
   }
 `;

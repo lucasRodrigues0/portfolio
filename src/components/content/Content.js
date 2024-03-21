@@ -7,7 +7,7 @@ import { Title, TitleWrapper } from './title';
 import { Paragraph } from './paragraph';
 import { List, ListWrapper, ListItem} from './list';
 import { ContactWrapper } from "./contact";
-import { Project, ProjectDescription, ProjectTitle, ProjectWrapper } from './project';
+import { Project, ProjectDescription, ProjectTitle, ProjectWrapper, ProjectLink } from './project';
 
 const ContentContainer = styled.div`
   background-color: #010005;
@@ -15,24 +15,18 @@ const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 90%;
 `;
 
-export const Content = ({language, isMobile}) => {
+export const Content = ({language}) => {
 
-  let boxVariants = {};
-
-  if(!isMobile) {
-    boxVariants = {
-       initialLeft: {opacity: 0, x: -50},
-       initialRight: {opacity: 0, x: 50},
-       initialTop: {opacity: 0, y: -50},
-       initialBottom: {opacity: 0, y: 50},
-       horizontalSlide: {opacity: 1, x: 0},
-       verticalSlide: {opacity: 1, y: 0},
-       transition: {type: "tween", duration: 0.7, ease: "easeOut"}
-
-    }
+  const boxVariants = {
+    initialLeft: {opacity: 0, x: -50},
+    initialRight: {opacity: 0, x: 50},
+    initialTop: {opacity: 0, y: -50},
+    initialBottom: {opacity: 0, y: 50},
+    horizontalSlide: {opacity: 1, x: 0},
+    verticalSlide: {opacity: 1, y: 0},
+    transition: {type: "tween", duration: 0.7, ease: "easeOut"}
   }
 
   return (
@@ -56,6 +50,8 @@ export const Content = ({language, isMobile}) => {
             {ABOUT_PARAGRAPH[`${language}`]}
           </Paragraph>
         </Section>
+      </SectionContainer>
+      <SectionContainer color="inv">
         <Section id="Skills">
           <TitleWrapper dir="right">
             <Title
@@ -82,6 +78,8 @@ export const Content = ({language, isMobile}) => {
             </List>
           </ListWrapper>
         </Section>
+      </SectionContainer>
+      <SectionContainer>
         <Section id="Projects">
           <TitleWrapper>
             <Title
@@ -104,13 +102,15 @@ export const Content = ({language, isMobile}) => {
                   transition="transition">
                     <ProjectTitle>{proj.title}</ProjectTitle>
                     <ProjectDescription>{proj.description[`${language}`]}</ProjectDescription>
-                    <a href={`https://${proj.link}`} target='blank'>{PROJECT_LINK_TEXT[`${language}`]}</a>
+                    <ProjectLink href={`https://${proj.link}`} target='blank'>{PROJECT_LINK_TEXT[`${language}`]}</ProjectLink>
                   </Project>
                 )
               })
             }
           </ProjectWrapper>
         </Section>
+      </SectionContainer>
+      <SectionContainer color="inv">
         <Section id="Contact">
           <TitleWrapper dir="right">
             <Title
@@ -127,7 +127,7 @@ export const Content = ({language, isMobile}) => {
           whileInView="verticalSlide"
           transition="transition">
             {
-              CONTACT.map((contact) => <LinkButton href={contact.href} target='blank' key={contact.name}>{contact.name}</LinkButton>)
+              CONTACT.map((contact) => <LinkButton href={contact.href} target='blank' key={contact.name} color="inv">{contact.name}</LinkButton>)
             }
           </ContactWrapper>
         </Section>
