@@ -12,33 +12,33 @@ const BurgerMenu = styled.div`
     }
 `;
 
-const Menu = styled.nav`
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-    width: 100%;
-    position: absolute;
-    right: 0;
-    top: 70px;
-    background-color: black;
+// const Menu = styled.nav`
+//     display: flex;
+//     flex-direction: column;
+//     height: fit-content;
+//     width: 100%;
+//     position: absolute;
+//     right: 0;
+//     top: 70px;
+//     background-color: black;
     
-`;
+// `;
 
-const List = styled.ul`
-    border: 1px solid red;
-    padding: 0;
-    position: relative;
-`;
+// const List = styled.ul`
+//     border: 1px solid red;
+//     padding: 0;
+//     position: relative;
+// `;
 
-const ListItem = styled.li`
-    border: 1px solid green;
-    color: white;
-    height: 50px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-`;
+// const ListItem = styled.li`
+//     border: 1px solid green;
+//     color: white;
+//     height: 50px;
+//     list-style: none;
+//     padding: 0;
+//     margin: 0;
+//     width: 100%;
+// `;
 
 export const MobileMenu = ({language}) => {
 
