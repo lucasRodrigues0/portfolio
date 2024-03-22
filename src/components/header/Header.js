@@ -4,7 +4,9 @@ import { LinkButton, ButtonsWrapper } from "../shared/link-button";
 import { Navbar } from "./navbar";
 import { Wrapper } from "./wrapper";
 import { Select, Option } from "./select";
-import { MobileMenu } from "./mobile-menu/MobileMenu";
+import { BurgerMenu } from "./mobile-menu/BurgerMenu";
+import { MobileMenu } from "./mobile-menu/menu/MobileMenu";
+import { useState } from "react";
 
 const Head = styled.header`
   background-color: #010005;
@@ -12,6 +14,8 @@ const Head = styled.header`
 `;
 
 export const Header = ({language, selectLanguage}) => {
+
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Head>
@@ -21,11 +25,12 @@ export const Header = ({language, selectLanguage}) => {
             <Option>PTBR</Option>
             <Option>EN</Option>
           </Select>
-          <MobileMenu language={language} />
+          <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} language={language} />
+          <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
           <ButtonsWrapper>
             {
-              OPTIONS.map((option) => 
-              <LinkButton key={option.EN} href={`/#${option.EN}`}>
+              OPTIONS.map((option) =>
+              <LinkButton key={option.EN} href={`/#${option.EN}`} >
                 {option[`${language}`]}
               </LinkButton>)              
             }

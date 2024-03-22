@@ -5,8 +5,9 @@ export const LinkButton = styled.a`
   border: 2px solid ${props => props.color === "inv" ? "#000" : "#fff"};
   border-radius: 50px;
   color: ${props => props.color === "inv" ? "#000" : "#fff"};
+  cursor: pointer;
   font-size: 20px;
-  height: 100%;
+  height: "100%";
   margin: 1rem 0.2rem;
   padding: 10px 5px;
   transition: background-color 0.2s ease-out, box-shadow 0.3s ease-out;
