@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { useEffect, useRef } from "react";
-import { useClickAway } from "react-use";
+import { useEffect } from "react";
 import { OPTIONS } from "../../../../utils/constants";
 
 const Menu = styled.nav`
@@ -14,7 +13,7 @@ const Menu = styled.nav`
     top: 0;
     transition: all 0.2s ease-in;
     transform: ${props => props.$isOpen ? "translateX(0%)" : "translateX(-100%)"};
-    width: 40vw;
+    width: 50vw;
     
     @media (max-width: 940px) {
         display: block;
@@ -40,10 +39,6 @@ const Button = styled.button`
 
 export const MobileMenu = ({isOpen, setIsOpen, language}) => {
 
-    const ref = useRef(null);
-
-    useClickAway(ref, () => setIsOpen(false));
-
     useEffect(() => {
         document.body.style.overflow = isOpen ? 'hidden' : 'auto';
     }, [isOpen]);
@@ -57,7 +52,7 @@ export const MobileMenu = ({isOpen, setIsOpen, language}) => {
     }
 
     return (
-        <Menu $isOpen={isOpen} ref={ref} >
+        <Menu $isOpen={isOpen} >
             <Wrapper>
             {
                 OPTIONS.map(option => {
